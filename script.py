@@ -13,7 +13,7 @@ def wake_on_lan():
     else:
         print("Error: No se encontró la dirección MAC en el archivo .env")
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['GET', 'POST'])
 def webhook_handler():
 
     wake_on_lan()
